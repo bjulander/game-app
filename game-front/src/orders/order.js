@@ -2,7 +2,7 @@
 export default function Order(props) {
     return (
         <>
-            <li key={props.indOrder.id}>{props.indOrder.name}</li>
+            <li key={props.sandwich.id}>{props.sandwich.name}</li>
         </>
     )
 }

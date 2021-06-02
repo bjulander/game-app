@@ -7,6 +7,7 @@ import ordersReducer from './reducers/ordersReducer'
 import {createStore, compose, applyMiddleware} from 'redux'
 import thunk from 'redux-thunk'
 import {composeWithDevTools} from 'redux-devtools-extension'
+// import * as FaIcons from "react-icons/fa" // <FaIcons.(iconName)/>
 
 // import {createBrowserHistory} from 'history'
 
