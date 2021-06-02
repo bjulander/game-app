@@ -12,7 +12,7 @@ class GameOrdersController < ApplicationController
     private 
     
     def game_order_params
-        params.require(:game_order).permit(:id, :bread, :cheese, :meats, :basics, :extras, :condiments, :game_id, :order_id)
+        params.require(:game_order).permit(:id, :name, :bread, :cheese, :meats, :basics, :extras, :condiments, :game_id, :order_id)
     end
 
 end
