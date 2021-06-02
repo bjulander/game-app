@@ -1,11 +1,11 @@
-import {Link} from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 
 export default function NavBar() {
     return (
         <>
-            <Link to="/">Home</Link>
-            <Link to="/scoreboard">Scoreboard</Link>
-            <Link to="/about">About</Link>
+            <NavLink to="/">Home</NavLink>
+            <NavLink to="/scoreboard">Scoreboard</NavLink>
+            <NavLink to="/about">About</NavLink>
         </>
     )
 }

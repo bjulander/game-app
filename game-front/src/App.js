@@ -8,9 +8,8 @@ function App() {
     <>
       <NavBar />
       <LeftBar />
-      <RightBar />
       <Main />
-  
+      <RightBar />
     </>
   )
 }
