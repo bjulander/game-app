@@ -1,11 +1,10 @@
-import React from 'react'
+import Orders from '../../orders/orders.js'
 
-function leftBar() {
+export default function leftBar() {
     return (
-        <div>
-            
-        </div>
+        <>
+            <Orders />
+        </>
     )
 }
 
-export default leftBar
