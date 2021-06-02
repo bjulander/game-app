@@ -1,12 +1,9 @@
-import NavBar from './NavBar'
-import GamePage from './GamePage'
-import Order from './orders/order.js'
-
+import Orders from './orders/orders.js'
 
 function App() {
   return (
     <>
-      <Order />
+      <Orders />
     </>
   )
 }
