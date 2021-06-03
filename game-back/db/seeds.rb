@@ -15,6 +15,6 @@ Order.create(name: "Italian", bread: "Squaw", cheese: "Pepper Jack", meats: "Sal
 Order.create(name: "Turkey", bread: "Wheat", cheese: "Provolone", meats: "Turkey", basics: "Lettuce, Tomato, Pickles", extras: "Sprouts", condiments: "Mayo")
 Order.create(name: "Club", bread: "White", cheese: "American", meats: "Ham, Turkey", basics: "Lettuce, Tomato", extras: "Olives", condiments: "Mayo, Mustard")
 
-# GameOrder.create(bread: "Squaw", cheese: "Pepper Jack", meats: "Salami, Pepperoni, Ham", basics: "Lettuce, Tomato, Onion, Pickles", extras: "Olives, Sprouts, Bell Pepper", condiments: "Mayo, Mustard", game_id: 1, order_id: 1)
-# GameOrder.create(bread: "Wheat", cheese: "Provolone", meats: "Turkey", basics: "Lettuce, Tomato, Pickles", extras: "Sprouts", condiments: "Mayo", game_id: 1, order_id: 2)
-# GameOrder.create(bread: "White", cheese: "American", meats: "Ham, Turkey", basics: "Lettuce, Tomato", extras: "Olives", condiments: "Mayo, Mustard", game_id: 1, order_id: 3)
+GameOrder.create(game_id: 1, order_id: 1)
+GameOrder.create(game_id: 1, order_id: 2)
+GameOrder.create(game_id: 1, order_id: 3)

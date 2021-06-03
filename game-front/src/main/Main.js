@@ -15,7 +15,7 @@ class Main extends Component {
                 <Route exact path="/">
                     <Instructions/>
                     <Link to="/game">
-                        <button type="button">Order Up</button>
+                        <button type="button">Start</button>
                     </Link>
                     </Route>
                 <Route exact path="/game">
@@ -24,7 +24,10 @@ class Main extends Component {
                     <RightBar />
                     </Route>
                 <Route exact path="/scoreboard">
-                    Scoreboard
+                    Scoreboard Comp
+                    </Route>
+                <Route exact path="/about">
+                    About Comp
                     </Route>
             </Switch>
           </>

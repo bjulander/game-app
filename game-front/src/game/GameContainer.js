@@ -6,8 +6,8 @@ class GameContainer extends Component {
     render(){
         return(
             <>
-            <h1>Current Order Comp</h1>
-            <h1>Ingredients List Comp</h1>
+            <h1>Current Order Comp (center top)</h1>
+            <h1>Ingredients List Comp (center)</h1>
             
             </>
         )
