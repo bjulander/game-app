@@ -50,5 +50,5 @@ class GameContainer extends Component {
     }
 }
 
-// export default withRouter(GameContainer)
+
 export default withRouter(connect(null, {fetchOrders})(GameContainer))
