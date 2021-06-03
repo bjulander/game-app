@@ -3,6 +3,8 @@ import {Route, Switch} from 'react-router-dom'
 import LeftBar from '../bars/leftBar/LeftBar.js'
 import RightBar from '../bars/rightBar/RightBar.js'
 import {withRouter} from 'react-router-dom'
+import fetchOrders from '../actions/fetchOrders'
+import {connect} from 'react-redux'
 
 
 
@@ -11,6 +13,10 @@ class GameContainer extends Component {
     constructor() {
         super()
         this.state = {user: ""}
+    }
+
+    componentDidMount() {
+        this.props.fetchOrders()
     }
 
 
@@ -27,14 +33,14 @@ class GameContainer extends Component {
             <Switch>
                 <Route path="/game">
                     <Route exact path="/game/new">
-                        <p>(Introduce surroundings)</p>
+                        <p>(Introduce layout)</p>
                         <form onSubmit={this.handleSubmit.bind(this)}>
                             <input type="text" size="5"/>
                             <input type="submit" value="Order Up" />
                         </form>
                     </Route>
                         <h4>Current Order Comp (center top)</h4>
-                        <h4>Ingredients List Comp (center)</h4>
+                        <h4>GameOrderForm Comp (center)</h4>
                     <LeftBar />
                     <RightBar />
                 </Route>
@@ -44,4 +50,5 @@ class GameContainer extends Component {
     }
 }
 
-export default withRouter(GameContainer)
+// export default withRouter(GameContainer)
+export default withRouter(connect(null, {fetchOrders})(GameContainer))

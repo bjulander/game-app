@@ -1,7 +1,8 @@
 export default function ordersReducer(state = {orders: []}, action) {
+  debugger
     switch (action.type) {
-      case "FETCH_LISTS":
-        return {lists: action.payload}
+      case "FETCH_ORDERS":
+        return {orders: action.payload}
       default:
         return state
   }

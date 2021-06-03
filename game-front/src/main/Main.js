@@ -4,6 +4,7 @@ import Instructions from './Instructions.js'
 import {Link} from 'react-router-dom'
 import GameContainer from '../game/GameContainer.js'
 
+
 class Main extends Component {
 
     render(){

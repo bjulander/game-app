@@ -21,6 +21,7 @@ class Orders extends Component {
 }
 
 function mapStateToProps(state){
+    debugger
     return {orders: state.orders}
 }
 
