@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-Game.create(user: "Blake", score: 3, time: "1:00")
+Game.create(user: "Blake", score: 10)
 # Game.create(user: "Ryli", score: 7, time: "1:20")
 # Game.create(user: "Collins", score: 5, time: "1:00")
 

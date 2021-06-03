@@ -5,14 +5,8 @@ class GameOrdersController < ApplicationController
     end
 
     def create
-        game_order = GameOrder.create(game_order_params)
+        game_order = GameOrder.create
         render json: game_order
-    end
-
-    private 
-    
-    def game_order_params
-        params.require(:game_order).permit(:id, :name, :bread, :cheese, :meats, :basics, :extras, :condiments, :game_id, :order_id)
     end
 
 end
