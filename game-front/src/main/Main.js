@@ -3,7 +3,7 @@ import {Route, Switch} from 'react-router-dom'
 import Instructions from './Instructions.js'
 import {Link} from 'react-router-dom'
 import GameContainer from '../game/GameContainer.js'
-import './MainStyle.css'
+import '../style/MainStyle.css'
 
 
 class Main extends Component {

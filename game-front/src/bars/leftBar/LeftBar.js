@@ -1,5 +1,5 @@
 import Orders from '../../orders/orders.js'
-import './LeftBarStyle.css'
+import '../../style/LeftBarStyle.css'
 
 export default function leftBar() {
     return (
