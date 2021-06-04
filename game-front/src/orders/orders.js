@@ -20,8 +20,8 @@ class Orders extends Component {
 }
 
 function mapStateToProps(state){
-    let orderObj = state.orders
-    return {orders: orderObj.orders}
+    let orderArray = state.ordersReducer.orders
+    return {orders: orderArray}
 }
 
 export default connect(mapStateToProps)(Orders)

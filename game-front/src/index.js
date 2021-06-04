@@ -11,7 +11,7 @@ import rootReducer from './reducers/rootReducer'
 
 // import {createBrowserHistory} from 'history'
 
-const initialState = {orders: {orders: []}, game: { user: "", score: 0}}
+const initialState = {orders: [], game: { user: "", score: 0}}
 const store = createStore(rootReducer, initialState, compose(applyMiddleware(thunk), composeWithDevTools()))
 
 
