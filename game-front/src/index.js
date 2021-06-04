@@ -7,6 +7,7 @@ import {createStore, compose, applyMiddleware} from 'redux'
 import thunk from 'redux-thunk'
 import {composeWithDevTools} from 'redux-devtools-extension'
 import rootReducer from './reducers/rootReducer'
+import './App.css';
 // import * as FaIcons from "react-icons/fa" // <FaIcons.(iconName)/>
 
 // import {createBrowserHistory} from 'history'

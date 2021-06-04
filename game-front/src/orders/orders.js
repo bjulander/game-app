@@ -10,8 +10,8 @@ class Orders extends Component {
     render (){
         return (
             <>
-                <h4>Upcoming Order: (leftBar)</h4>
                 <ol type="1">
+                    <h4>Upcoming Order: (leftBar)</h4>
                     {this.props.orders.map(order => <Order sandwich={order}/>)}
                 </ol>
             </>
