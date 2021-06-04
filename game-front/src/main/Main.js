@@ -13,7 +13,7 @@ class Main extends Component {
             <Switch>
                 <Route exact path="/">
                     <Instructions/>
-                    <Link to="/game/new">
+                    <Link to="/game">
                         <button type="button">New Game</button>
                     </Link>
                     </Route>

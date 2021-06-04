@@ -5,13 +5,10 @@ class GamesController < ApplicationController
     end
 
     def create
-        game = Game.create(game_params)
+        name = params[:game][:user]
+        game = Game.new(user: name)
+        game.save
         render json: game
     end
 
-    private 
-    
-    def game_params
-        params.require(:game).permit(:id, :user, :score)
-    end
 end

@@ -3,7 +3,6 @@ import Order from './order.js'
 // import {Redirect} from 'react-router-dom'
 // import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
-//import fetchOrders
 
 
 
@@ -21,7 +20,8 @@ class Orders extends Component {
 }
 
 function mapStateToProps(state){
-    return {orders: state.orders}
+    let orderObj = state.orders
+    return {orders: orderObj.orders}
 }
 
 export default connect(mapStateToProps)(Orders)
