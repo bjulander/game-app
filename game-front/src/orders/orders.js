@@ -20,6 +20,7 @@ class Orders extends Component {
 }
 
 function mapStateToProps(state){
+    debugger
     let orderArray = state.ordersReducer.orders
     return {orders: orderArray}
 }

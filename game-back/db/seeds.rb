@@ -18,3 +18,5 @@ Order.create(name: "Club", bread: "White", cheese: "American", meats: "Ham, Turk
 GameOrder.create(game_id: 1, order_id: 1)
 GameOrder.create(game_id: 1, order_id: 2)
 GameOrder.create(game_id: 1, order_id: 3)
+
+Sandwich.create(breads: [], meats: [], )

@@ -8,20 +8,23 @@ import thunk from 'redux-thunk'
 import {composeWithDevTools} from 'redux-devtools-extension'
 import rootReducer from './reducers/rootReducer'
 import './style/App.css';
+import Ingredients from './Ingredients.js'
 // import * as FaIcons from "react-icons/fa" // <FaIcons.(iconName)/>
 
 // import {createBrowserHistory} from 'history'
 
-const initialState = {orders: [], game: { user: "", score: 0}, timer: 60}
+const initialState = {orders: [], game: { user: "", score: 0}, timer: 5, Sandwich: {Ingredients}}
 const store = createStore(rootReducer, initialState, compose(applyMiddleware(thunk), composeWithDevTools()))
-
+debugger
 
 ReactDOM.render(
   <Router >
+    
     <Provider store={store}>
       <App/>
     </Provider>
   </Router>,
   document.getElementById('root')
+
 )
 

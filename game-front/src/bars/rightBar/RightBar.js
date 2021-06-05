@@ -6,13 +6,11 @@ import Timer from './Timer.js'
 
 class RightBar extends Component {
     
-
     render(){
-        debugger
         return (
             <>
                 <Timer/>
-                <h4>Points Comp (rightBar midtop)</h4>
+                <h4>Completed Orders Comp (rightBar midtop)</h4>
                 <h4>Sandwich Builder Comp (rightBar cent)</h4>
             </>
         )

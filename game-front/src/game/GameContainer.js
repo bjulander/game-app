@@ -8,6 +8,9 @@ import newGame from '../actions/newGame'
 import '../style/BarsStyle.css'
 import startTimer from '../actions/startTimer'
 import stopTimer from '../actions/stopTimer'
+import SandwichForm from './SandwichForm.js'
+import Ingredients from '../Ingredients.js'
+
 
 class GameContainer extends Component {
 
@@ -30,9 +33,9 @@ class GameContainer extends Component {
         this.props.stopTimer()
     }
 
-    handleClick(){
+    // handleClick(){
         
-    }
+    // }
 
     render(){
         return(
@@ -45,12 +48,14 @@ class GameContainer extends Component {
                     </form>
                 : null}
                 <h4>Current Order Comp (center top)</h4>
-                <h4>GameOrderForm Comp (center)</h4>
+                <span>
+                    <SandwichForm Ingredients={Ingredients}/>
+                </span>
                 <span className="LeftBarStyle">
                     <LeftBar />
                 </span>
                 <span className="RightBarStyle" >
-                    <RightBar timed={this.props.startTimer()}/>
+                    <RightBar/>
                 </span>
             </>
         )

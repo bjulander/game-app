@@ -1,5 +1,4 @@
 import NavBar from './bars/navBar/NavBar.js'
-
 import Main from './main/Main.js'
 import './style/BarsStyle.css';
 import './style/MainStyle.css';
