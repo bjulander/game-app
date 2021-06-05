@@ -5,6 +5,9 @@ import {withRouter} from 'react-router-dom'
 import fetchOrders from '../actions/fetchOrders'
 import {connect} from 'react-redux'
 import newGame from '../actions/newGame'
+import '../style/BarsStyle.css'
+import startTimer from '../actions/startTimer'
+import stopTimer from '../actions/stopTimer'
 
 class GameContainer extends Component {
 
@@ -23,6 +26,12 @@ class GameContainer extends Component {
         this.setState({newForm: false})
         const name = e.target[0].value
         this.props.newGame(name)
+        this.props.startTimer()
+        this.props.stopTimer()
+    }
+
+    handleClick(){
+        
     }
 
     render(){
@@ -37,12 +46,16 @@ class GameContainer extends Component {
                 : null}
                 <h4>Current Order Comp (center top)</h4>
                 <h4>GameOrderForm Comp (center)</h4>
-                <LeftBar />
-                <RightBar />
+                <span className="LeftBarStyle">
+                    <LeftBar />
+                </span>
+                <span className="RightBarStyle" >
+                    <RightBar timed={this.props.startTimer()}/>
+                </span>
             </>
         )
     }
 }
 
 
-export default withRouter(connect(null, {fetchOrders, newGame})(GameContainer))
+export default withRouter(connect(null, {fetchOrders, newGame, startTimer, stopTimer})(GameContainer))

@@ -11,7 +11,7 @@ class Orders extends Component {
         return (
             <>
                 <ol type="1">
-                    <h4>Upcoming Order: (leftBar)</h4>
+                    <h4>Upcoming Order:</h4>
                     {this.props.orders.map(order => <Order sandwich={order}/>)}
                 </ol>
             </>

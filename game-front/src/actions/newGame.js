@@ -17,4 +17,4 @@ export default function newGame(name) {
       .then(r =>  r.json())
       .then(gm => dispatch({type: "NEW_GAME", payload: gm}))
     }
-  }
+}

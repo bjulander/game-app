@@ -3,15 +3,12 @@ import {Route, Switch} from 'react-router-dom'
 import Instructions from './Instructions.js'
 import {Link} from 'react-router-dom'
 import GameContainer from '../game/GameContainer.js'
-import '../style/MainStyle.css'
-
 
 class Main extends Component {
 
     render(){
         return (
             <>
-            <div className="mainPageStyle">
                 <Switch>
                     <Route exact path="/">
                         <Instructions/>
@@ -29,8 +26,7 @@ class Main extends Component {
                         About Comp
                         </Route>
                 </Switch>
-            </div>
-          </>
+            </>
         )
     }
 }

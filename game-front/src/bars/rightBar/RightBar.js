@@ -1,18 +1,19 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
+import Timer from './Timer.js'
 
 
 
 class RightBar extends Component {
+    
 
     render(){
+        debugger
         return (
             <>
-                <article className="RightBarStyle">
-                    <h4>Timer Comp (rightBar top)</h4>
-                    <h4>Points Comp (rightBar midtop)</h4>
-                    <h4>Sandwich Builder Comp (rightBar cent)</h4>
-                </article>
+                <Timer/>
+                <h4>Points Comp (rightBar midtop)</h4>
+                <h4>Sandwich Builder Comp (rightBar cent)</h4>
             </>
         )
     }

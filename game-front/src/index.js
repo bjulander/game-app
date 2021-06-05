@@ -12,7 +12,7 @@ import './style/App.css';
 
 // import {createBrowserHistory} from 'history'
 
-const initialState = {orders: [], game: { user: "", score: 0}}
+const initialState = {orders: [], game: { user: "", score: 0}, timer: 60}
 const store = createStore(rootReducer, initialState, compose(applyMiddleware(thunk), composeWithDevTools()))
 
 
