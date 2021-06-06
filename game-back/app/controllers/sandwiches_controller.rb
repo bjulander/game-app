@@ -1,7 +1,7 @@
 class SandwichesController < ApplicationController
 
     def index
-        render json: Sandwich.all
+        render json: Ingredients.all
     end
 
     def create

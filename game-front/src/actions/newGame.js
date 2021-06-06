@@ -14,7 +14,7 @@ export default function newGame(name) {
             body: JSON.stringify(game)
         }
       fetch("http://localhost:3001/games", options)
-      .then(r =>  r.json())
+      .then(response =>  response.json())
       .then(gm => dispatch({type: "NEW_GAME", payload: gm}))
     }
 }

@@ -2,15 +2,14 @@ import React, {Component} from 'react'
 import LeftBar from '../bars/leftBar/LeftBar.js'
 import RightBar from '../bars/rightBar/RightBar.js'
 import {withRouter} from 'react-router-dom'
-import fetchOrders from '../actions/fetchOrders'
+import fetchOrder from '../actions/fetchOrder'
 import {connect} from 'react-redux'
 import newGame from '../actions/newGame'
 import '../style/BarsStyle.css'
 import startTimer from '../actions/startTimer'
 import stopTimer from '../actions/stopTimer'
 import SandwichForm from './SandwichForm.js'
-import Ingredients from '../Ingredients.js'
-
+import Ingredients from '../ingredients/Ingredients'
 
 class GameContainer extends Component {
 
@@ -20,7 +19,7 @@ class GameContainer extends Component {
     }
 
     componentDidMount() {
-        this.props.fetchOrders()
+        this.props.fetchOrder()
     }
 
 
@@ -33,11 +32,8 @@ class GameContainer extends Component {
         this.props.stopTimer()
     }
 
-    // handleClick(){
-        
-    // }
-
     render(){
+
         return(
             <>
                 <p>(Introduce layout)</p>
@@ -47,9 +43,9 @@ class GameContainer extends Component {
                         <input type="submit" value="Start" />
                     </form>
                 : null}
-                <h4>Current Order Comp (center top)</h4>
                 <span>
-                    <SandwichForm Ingredients={Ingredients}/>
+                    <SandwichForm/>
+                    <Ingredients/>
                 </span>
                 <span className="LeftBarStyle">
                     <LeftBar />
@@ -63,4 +59,4 @@ class GameContainer extends Component {
 }
 
 
-export default withRouter(connect(null, {fetchOrders, newGame, startTimer, stopTimer})(GameContainer))
+export default withRouter(connect(null, {fetchOrder, newGame, startTimer, stopTimer})(GameContainer))

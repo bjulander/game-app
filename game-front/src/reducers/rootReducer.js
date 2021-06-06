@@ -1,13 +1,15 @@
 import { combineReducers } from "redux"
-import ordersReducer from './ordersReducer'
+import orderReducer from './orderReducer'
 import gameReducer from './gameReducer'
 import timerReducer from './timerReducer'
+import ingredientsReducer from './ingredientsReducer'
 
 const rootReducer = combineReducers(
     {
         gameReducer,
-        ordersReducer,
-        timerReducer
+        orderReducer,
+        timerReducer,
+        ingredientsReducer
     }
 )
 

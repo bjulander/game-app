@@ -10,20 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_01_202010) do
-
-  create_table "game_orders", force: :cascade do |t|
-    t.integer "game_id"
-    t.integer "order_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["game_id"], name: "index_game_orders_on_game_id"
-    t.index ["order_id"], name: "index_game_orders_on_order_id"
-  end
+ActiveRecord::Schema.define(version: 2021_06_05_195755) do
 
   create_table "games", force: :cascade do |t|
     t.string "user"
     t.integer "score", default: 0
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "ingredients", force: :cascade do |t|
+    t.string "bread"
+    t.string "meat"
+    t.string "cheese"
+    t.string "basics"
+    t.string "condiments"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -38,6 +39,22 @@ ActiveRecord::Schema.define(version: 2021_06_01_202010) do
     t.text "condiments"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "sandwiches", force: :cascade do |t|
+    t.string "name"
+    t.string "bread"
+    t.string "cheese"
+    t.text "meats"
+    t.text "basics"
+    t.text "extras"
+    t.text "condiments"
+    t.integer "game_id"
+    t.integer "order_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["game_id"], name: "index_sandwiches_on_game_id"
+    t.index ["order_id"], name: "index_sandwiches_on_order_id"
   end
 
 end

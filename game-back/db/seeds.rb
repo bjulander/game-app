@@ -15,8 +15,8 @@ Order.create(name: "Italian", bread: "Squaw", cheese: "Pepper Jack", meats: "Sal
 Order.create(name: "Turkey", bread: "Wheat", cheese: "Provolone", meats: "Turkey", basics: "Lettuce, Tomato, Pickles", extras: "Sprouts", condiments: "Mayo")
 Order.create(name: "Club", bread: "White", cheese: "American", meats: "Ham, Turkey", basics: "Lettuce, Tomato", extras: "Olives", condiments: "Mayo, Mustard")
 
-GameOrder.create(game_id: 1, order_id: 1)
-GameOrder.create(game_id: 1, order_id: 2)
-GameOrder.create(game_id: 1, order_id: 3)
+# GameOrder.create(game_id: 1, order_id: 1)
+# GameOrder.create(game_id: 1, order_id: 2)
+# GameOrder.create(game_id: 1, order_id: 3)
 
-Sandwich.create(breads: [], meats: [], )
+Ingredient.create(bread: "White Wheat Squaw Pumpernickel", meat: "Turkey Ham Pepperoni Salami Tuna", cheese: "PepperJack Cheddar Provolone Havarti Muenster", basics: "Spinach Tomato Onion Pickle", condiments: "Mayo Mustard Oil&Vinegar Sriracha" )

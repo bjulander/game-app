@@ -1,9 +1,9 @@
-import Orders from '../../orders/orders.js'
+import Order from '../../orders/order.js'
 
 export default function leftBar() {
     return (
         <>
-                <Orders />
+            <Order />
         </>
     )
 }
