@@ -9,10 +9,8 @@ class Ingredients extends Component {
     render (){
         return (
             <>
-                <ul>
-                    <h1>Build Order:</h1>
-                    {this.props.ingredients && this.props.ingredients.map((ing, i) => <span key={ing.id}><Ingredient indIng={ing}/></span> )}
-                </ul>
+                <h1>Build Order:</h1>
+                {this.props.ingredients && this.props.ingredients.map((ing, i) => <span key={ing.id}><Ingredient indIng={ing}/></span> )}
 
             </>
         )

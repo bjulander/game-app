@@ -11,7 +11,7 @@ export default function Ingredient(props) {
   return (
         <>
             <h3>{props.indIng.name}</h3>
-            {props.indIng && props.indIng.choices.map(choice => <Choice key={choice.id} item={choice}/>)}
+            {props.indIng && props.indIng.choices.map(choice =>  <div className="ChoicesStyle"><Choice key={choice.id} item={choice}/></div>)}
         </>
     )
 }
