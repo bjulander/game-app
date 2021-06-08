@@ -1,14 +1,7 @@
 class IngredientsController < ApplicationController
 
     def index
-        Ingredient.all
-        binding.pry
-        render json: Ingredient.all
-    end
-
-    def show
-        ingObj = Ingredient.last
-        render json: ingObj
+        render json: Ingredient.all, include: [choices: {only: [:name]}]
     end
 
 end

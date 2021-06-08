@@ -5,5 +5,5 @@ export default function ingredientsReducer(state = {ingredients: []}, action) {
       default:
         return state
     }
-  }
+}
     

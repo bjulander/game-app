@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_05_195755) do
+ActiveRecord::Schema.define(version: 2021_06_07_171006) do
+
+  create_table "choices", force: :cascade do |t|
+    t.string "name"
+    t.integer "ingredient_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "games", force: :cascade do |t|
     t.string "user"
@@ -20,11 +27,8 @@ ActiveRecord::Schema.define(version: 2021_06_05_195755) do
   end
 
   create_table "ingredients", force: :cascade do |t|
-    t.string "bread"
-    t.string "meat"
-    t.string "cheese"
-    t.string "basics"
-    t.string "condiments"
+    t.string "name"
+    t.integer "sandwich_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -33,9 +37,8 @@ ActiveRecord::Schema.define(version: 2021_06_05_195755) do
     t.string "name"
     t.string "bread"
     t.string "cheese"
-    t.text "meats"
+    t.text "meat"
     t.text "basics"
-    t.text "extras"
     t.text "condiments"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -43,18 +46,9 @@ ActiveRecord::Schema.define(version: 2021_06_05_195755) do
 
   create_table "sandwiches", force: :cascade do |t|
     t.string "name"
-    t.string "bread"
-    t.string "cheese"
-    t.text "meats"
-    t.text "basics"
-    t.text "extras"
-    t.text "condiments"
     t.integer "game_id"
-    t.integer "order_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["game_id"], name: "index_sandwiches_on_game_id"
-    t.index ["order_id"], name: "index_sandwiches_on_order_id"
   end
 
 end

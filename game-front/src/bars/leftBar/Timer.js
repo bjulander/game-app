@@ -5,14 +5,6 @@ import { connect } from "react-redux";
 
 class Timer extends Component {
 
-    // componentDidMount() {
-    //     this.props.startTimer()
-    // }
-
-    // componentWillUnmount() {
-    //     this.props.stopTimer()
-    // }
-
   render() {
    return(
         <section className="Timer">

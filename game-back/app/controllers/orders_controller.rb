@@ -1,7 +1,8 @@
 class OrdersController < ApplicationController
 
     def index
-        render json: Order.order('RANDOM()').first
+        orders = Order.order('RANDOM()')
+        render json: orders.first
     end
     
 end

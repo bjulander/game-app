@@ -1,31 +1,27 @@
-import React, {Component} from 'react'
-// import Order from './order.js'
+import React, {Component, Fragment} from 'react'
 // import {Redirect} from 'react-router-dom'
-// import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
-import fetchIngredients from '../actions/fetchIngredients'
+import Ingredient from './Ingredient.js'
+
 
 class Ingredients extends Component {
-
-    componentDidMount(){
-        this.props.fetchIngredients()
-    }
 
     render (){
         return (
             <>
-                <ol type="1">
-                    <h4>Build Order:</h4>
-                    {this.props.ingredients.name}
-                </ol>
+                <ul>
+                    <h1>Build Order:</h1>
+                    {this.props.ingredients && this.props.ingredients.map((ing, i) => <span key={ing.id}><Ingredient indIng={ing}/></span> )}
+                </ul>
+
             </>
         )
     }
 }
 
 function mapStateToProps(state){
-    let ingArray = state.ingredientsReducer.ingredients
-    return {ingredients: ingArray}
+    let ings = state.ingredientsReducer.ingredients
+    return {ingredients: ings}
 }
 
-export default connect(mapStateToProps,{fetchIngredients})(Ingredients)
+export default connect(mapStateToProps)(Ingredients)

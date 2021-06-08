@@ -4,9 +4,8 @@ class CreateOrders < ActiveRecord::Migration[6.1]
       t.string :name
       t.string :bread
       t.string :cheese
-      t.text :meats  
+      t.text :meat
       t.text :basics
-      t.text :extras
       t.text :condiments
 
       t.timestamps

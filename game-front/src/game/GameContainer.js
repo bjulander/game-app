@@ -3,25 +3,25 @@ import LeftBar from '../bars/leftBar/LeftBar.js'
 import RightBar from '../bars/rightBar/RightBar.js'
 import {withRouter} from 'react-router-dom'
 import fetchOrder from '../actions/fetchOrder'
+import fetchIngredients from '../actions/fetchIngredients'
 import {connect} from 'react-redux'
 import newGame from '../actions/newGame'
 import '../style/BarsStyle.css'
 import startTimer from '../actions/startTimer'
 import stopTimer from '../actions/stopTimer'
-import SandwichForm from './SandwichForm.js'
 import Ingredients from '../ingredients/Ingredients'
+import '../style/IngredientsStyle.css'
 
 class GameContainer extends Component {
+
+    componentDidMount(){
+        this.props.fetchIngredients()
+    }
 
     constructor() {
         super()
         this.state = {newForm: true}
     }
-
-    componentDidMount() {
-        this.props.fetchOrder()
-    }
-
 
     handleSubmit(e){
         e.preventDefault()
@@ -30,6 +30,7 @@ class GameContainer extends Component {
         this.props.newGame(name)
         this.props.startTimer()
         this.props.stopTimer()
+        this.props.fetchOrder()
     }
 
     render(){
@@ -38,17 +39,18 @@ class GameContainer extends Component {
             <>
                 <p>(Introduce layout)</p>
                 {this.state.newForm ?
-                    <form onSubmit={this.handleSubmit.bind(this)}>
-                        <input type="text" size="5"/>                            
-                        <input type="submit" value="Start" />
-                    </form>
+                    <div className="FormStyle">
+                        <form onSubmit={this.handleSubmit.bind(this)}>
+                            <input type="text" size="5"/>                            
+                            <input type="submit" value="Start" />
+                        </form>
+                    </div>
                 : null}
-                <span>
-                    <SandwichForm/>
-                    <Ingredients/>
-                </span>
                 <span className="LeftBarStyle">
                     <LeftBar />
+                </span>
+                <span className="IngredientsStyle">
+                    <Ingredients />
                 </span>
                 <span className="RightBarStyle" >
                     <RightBar/>
@@ -59,4 +61,4 @@ class GameContainer extends Component {
 }
 
 
-export default withRouter(connect(null, {fetchOrder, newGame, startTimer, stopTimer})(GameContainer))
+export default withRouter(connect(null, {fetchOrder, newGame, startTimer, stopTimer, fetchIngredients})(GameContainer))

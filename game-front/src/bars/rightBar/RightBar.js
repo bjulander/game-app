@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
-import Timer from './Timer.js'
+import SandwichForm from './SandwichForm.js'
 
 
 
@@ -9,9 +9,8 @@ class RightBar extends Component {
     render(){
         return (
             <>
-                <Timer/>
-                <h4>Completed Orders Comp (rightBar midtop)</h4>
-                <h4>Sandwich Builder Comp (rightBar cent)</h4>
+                <h3>Completed Orders Comp</h3>
+                <SandwichForm/>
             </>
         )
     }

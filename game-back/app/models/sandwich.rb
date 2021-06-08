@@ -1,4 +1,4 @@
 class Sandwich < ApplicationRecord
     belongs_to :game
-    belongs_to :order
+    has_many :ingredients
 end

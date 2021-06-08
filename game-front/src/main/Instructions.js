@@ -2,10 +2,10 @@
 const Instructions = () => {
     return (
         <>
-            <div>
+            <span>
                 <h1>Game instructions!</h1>
                 <p>blah blah blah</p>
-            </div>
+            </span>
         </>
     )
 }
